@@ -4,7 +4,7 @@ jobs:
   build:
     working_directory: /loquesea
     docker:
-      - image: docker:18.1-r0
+      - image: docker:18.06.3-ce-git
     steps:
       - checkout
       - setup_remote_docker
