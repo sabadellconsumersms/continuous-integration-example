@@ -4,15 +4,15 @@ jobs:
   build:
     working_directory: /loquesea
     docker:
-      - image: docker:18.06.3-ce-git
+      - image: docker:20.10.13
     steps:
       - checkout
       - setup_remote_docker
       - run:
           name: Install dependencies
           command: |
-            apk add --no-cache py-pip=18.1-r0
-            pip install docker-compose==1.15.0
+            apk add --no-cache py-pip=20.3.4-r1
+            pip install docker-compose==1.26.0
       - run:
           name: Run tests
           command: |
